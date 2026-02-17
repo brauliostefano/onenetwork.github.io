@@ -1,0 +1,55 @@
+// tailwind.config.js
+export default {
+  darkMode: 'class',
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        EuclidRegular: ['Euclid Regular', 'sans-serif'],
+        EuclidLight: ['Euclid Light', 'sans-serif'],
+        EuclidMedium: ['Euclid Medium', 'sans-serif'],
+        EuclidSemibold: ['Euclid SemiBold', 'sans-serif'],
+        EuclidBold: ['Euclid Bold', 'sans-serif'],
+      },
+      colors: {
+        blackEno: '#2C2C2D',
+        blackEnoBM: '#1E1E1E',
+        bleachAqua: '#BDE0E2',
+        chalkViolet: '#9183A4',
+        customPurple: '#9183a4',
+        errorMessage: '#FF2D55',
+        goldenKiwi: '#F2D541',
+        grayEno: '#727272',
+        grayEnoAlt: '#616161',
+        grayContainer: '#383838',
+        legionBlue: '#0A2A36',
+        mainBone: '#ECECEC',
+        mainBoneAlt: '#e4e4e4',
+        mainBoneBM: '#A8A8A8',
+        neutral: '#F4F4F4',
+        shadyDark: '#004034',
+        shadyGlade: '#02735E',
+        shadyGladeBM: '#14A389',
+        shadyGladeHighlight: '#00ffd1',
+        shadyGladeInactive: '#80B9AE',
+        shadyHover: '#025c4b',
+        blackEnoCSS: 'var(--blackEno)',
+        pinkChoose: '#E467C9',
+        purpleChoose: '#9747FF',
+        blueChoose: '#572EFB',
+      },
+      animation: {
+        progress: 'progress 1s ease-in-out infinite',
+        'slow-pulse': 'pulse 4s ease-in-out infinite',
+      },
+      keyframes: {
+        progress: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
