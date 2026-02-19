@@ -19,7 +19,7 @@ export default function ParallaxGlassHero() {
   const scale = useTransform(scrollY, [0, 500], [1, 0.9]);
 
   return (
-    <section className="relative min-h-[100vh] bg-white flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative py-36 bg-white flex items-center justify-center overflow-hidden pt-32">
       {/* Fondo con grilla */}
       <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b981_1px,transparent_1px),linear-gradient(to_bottom,#10b981_1px,transparent_1px)] bg-[size:60px_60px] opacity-[0.04]" />
@@ -29,7 +29,7 @@ export default function ParallaxGlassHero() {
       {/* Cristal decorativo trasero */}
       <motion.div
         style={{ y: yBg, opacity }}
-        className="absolute top-[20%] right-[10%] w-64 h-64 bg-emerald-50/40 backdrop-blur-3xl border border-emerald-100/50 rounded-[3rem] -rotate-12 z-10 hidden lg:block"
+        className="absolute right-[10%] w-64 h-64 bg-emerald-50/40 backdrop-blur-3xl border border-emerald-100/50 rounded-[3rem] -rotate-12 z-10 hidden lg:block"
       />
 
       <div className="container mx-auto px-6 relative z-20">
@@ -46,16 +46,16 @@ export default function ParallaxGlassHero() {
             <span>Dev_Archive // BUE_LOC_2026</span>
           </motion.div>
 
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter leading-[0.85] text-emerald-950 uppercase mb-10">
+          <h1 className="text-5xl md:text-9xl font-black tracking-tighter leading-[0.85] text-emerald-950 uppercase mb-10">
             Tokenize <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-emerald-400 to-emerald-900 pb-4">
               potential
             </span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-emerald-900/40 font-medium leading-relaxed mb-12">
-            Ecosistema de infraestructura de alta fidelidad para la nueva
-            economía creativa. Arquitectura verificada y escalable.
+          <p className="max-w-2xl mx-auto text-sm md:text-xl text-emerald-900/40 font-medium leading-relaxed mb-12">
+            High-fidelity infrastructure ecosystem for the new creative economy.
+            Verified and scalable architecture.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8">

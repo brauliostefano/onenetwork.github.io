@@ -17,57 +17,6 @@ import {
   Terminal,
 } from 'lucide-react';
 
-// --- 1. HEADER REFINADO (Sin bordes duros) ---
-export function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-0 w-full z-[100] flex justify-center pt-6 px-6 pointer-events-none"
-    >
-      <motion.nav
-        animate={{
-          width: scrolled ? 'auto' : '95%',
-          backgroundColor: scrolled
-            ? 'rgba(255, 255, 255, 0.8)'
-            : 'transparent',
-          backdropFilter: scrolled ? 'blur(20px)' : 'blur(0px)',
-          padding: scrolled ? '12px 24px' : '20px 40px',
-        }}
-        // Eliminamos 'border' y usamos una sombra muy suave (shadow-sm)
-        className="flex items-center justify-between rounded-full pointer-events-auto transition-all duration-500"
-      >
-        <span className="text-emerald-950 font-black tracking-tighter text-xl">
-          ONE NETWORK
-        </span>
-        <div className="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-[0.2em] text-emerald-900/40">
-          <a href="#agnes" className="hover:text-emerald-600 transition-colors">
-            Agnes AI
-          </a>
-          <a
-            href="#foundations"
-            className="hover:text-emerald-600 transition-colors"
-          >
-            Protocol
-          </a>
-        </div>
-        <button className="bg-emerald-600 text-white px-6 py-2 rounded-full text-xs font-bold hover:shadow-lg hover:shadow-emerald-100 transition-all">
-          Connect
-        </button>
-      </motion.nav>
-    </motion.header>
-  );
-}
-
-// --- 3. PROTOCOL FOUNDATIONS (Sin 'border-t') ---
 export function ProtocolFoundations() {
   const foundations = [
     {
@@ -124,7 +73,6 @@ export function ProtocolFoundations() {
 export default function OneNetworkLanding() {
   return (
     <div className="bg-white">
-      <Header />
       <main>
         <ProtocolFoundations />
       </main>
