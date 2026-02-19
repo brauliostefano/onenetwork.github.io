@@ -16,12 +16,4 @@ A high-fidelity Web3 ecosystem landing page designed for the new creative econom
 - **Animations:** Framer Motion (Orchestration and gesture handling).
 - **Icons:** Lucide React (Engineering-focused iconography).
 
-## 📍 Project Context
-
-- **Developer:** Stefano – Full Stack / Frontend Developer.
-- **Location:** Buenos Aires, Argentina.
-- **Timeline:** 2026 Roadmap.
-
----
-
 _Built with precision to tokenize potential._
